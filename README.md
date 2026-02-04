@@ -5,330 +5,304 @@
 <h1 align="center">TaskShot</h1>
 
 <p align="center">
-  <strong>Accessible Screenshot Documentation Tool</strong><br>
-  Create step-by-step tutorials with automatic screenshot capture
+  <strong>Take Screenshots the Easy Way!</strong><br>
+  Click through any task and TaskShot saves pictures of each step.
 </p>
 
 <p align="center">
-  Made by <a href="https://github.com/Tech-Inclusion-Pro">Rocco Catrone of Tech Inclusion Pro</a><br>
-  Licensed under MIT License - Free and Open Source
+  Made by Rocco Catrone of Tech Inclusion Pro<br>
+  Free to use and share!
 </p>
 
 ---
 
-## What is TaskShot?
+## What Does TaskShot Do?
 
-TaskShot is an open-source, accessible screenshot documentation tool designed with **Universal Design for Learning (UDL)** and **WCAG 2.1 AA compliance** at its core. It allows you to capture screenshots by simply clicking through your workflow, then generates accessible Word documents perfect for tutorials, training materials, and documentation.
+TaskShot helps you make step-by-step guides with pictures. Here's how it works:
 
-### Key Features
+1. You click "Start"
+2. You do your task (like opening a file or clicking buttons)
+3. Every time you click, TaskShot takes a picture
+4. When you're done, you get a Word document with all your pictures
 
-- **Click-to-Capture**: Every mouse click captures a screenshot automatically
-- **Visual Click Indicator**: Red circle shows exactly where you clicked
-- **Step-by-Step Review**: Review, title, and add notes to each screenshot
-- **Alt Text Support**: Add accessibility descriptions to every image
-- **Accessible Output**: Generates WCAG 2.1 AA compliant Word documents
-- **Full Keyboard Navigation**: Complete keyboard accessibility
-- **Screen Reader Compatible**: Works with assistive technologies
-- **Customizable Settings**: Adjust colors, sizes, and feedback options
-
----
-
-## Installation
-
-### Prerequisites
-
-- **Python 3.10 or higher**
-- **pip** (Python package manager)
-
-### Step 1: Clone the Repository
-
-```bash
-git clone https://github.com/Tech-Inclusion-Pro/TaskShot-Compiler.git
-cd TaskShot-Compiler
-```
-
-### Step 2: Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 3: Run TaskShot
-
-```bash
-python3 main.py
-```
+It's great for:
+- Teaching someone how to do something on a computer
+- Making instructions that are easy to follow
+- Creating guides that work for everyone, including people who use screen readers
 
 ---
 
-## Platform-Specific Instructions
+## How to Get TaskShot on Your Computer
 
-### macOS
+### What You Need First
 
-#### Required Permissions
-
-TaskShot needs the following permissions to capture screenshots and detect mouse clicks:
-
-1. **Screen Recording Permission**
-   - Go to **System Settings** → **Privacy & Security** → **Screen Recording**
-   - Click **+** and add **Terminal** (or your terminal app)
-   - Restart TaskShot after granting permission
-
-2. **Accessibility / Input Monitoring Permission**
-   - Go to **System Settings** → **Privacy & Security** → **Accessibility**
-   - Click **+** and add **Terminal** (or your terminal app)
-   - You may also need to add it to **Input Monitoring**
-
-#### Creating a macOS App (Optional)
-
-To run TaskShot from your Applications folder:
-
-1. Create the app bundle structure:
-```bash
-mkdir -p /Applications/TaskShot.app/Contents/MacOS
-mkdir -p /Applications/TaskShot.app/Contents/Resources
-```
-
-2. Create the launcher script at `/Applications/TaskShot.app/Contents/MacOS/TaskShot`:
-```bash
-#!/bin/bash
-osascript <<EOF
-tell application "Terminal"
-    activate
-    do script "cd ~/TaskShot && python3 main.py; exit"
-end tell
-EOF
-```
-
-3. Make it executable and sign:
-```bash
-chmod +x /Applications/TaskShot.app/Contents/MacOS/TaskShot
-codesign --force --deep --sign - /Applications/TaskShot.app
-```
-
-> **Important Note**: When running from the Applications folder, a **Terminal window will open** - this is normal and required for the app to have proper input monitoring permissions. The Terminal window will close automatically when you quit TaskShot.
+You need **Python** on your computer. Python is a free program that makes TaskShot work.
 
 ---
 
-### Windows
+## Step-by-Step Download Instructions
 
-#### Installation
+### For Mac Computers
 
-1. Install Python from [python.org](https://www.python.org/downloads/)
-   - **Important**: Check "Add Python to PATH" during installation
+**Step 1: Check if you have Python**
 
-2. Open Command Prompt or PowerShell and run:
-```cmd
-git clone https://github.com/Tech-Inclusion-Pro/TaskShot-Compiler.git
-cd TaskShot-Compiler
-pip install -r requirements.txt
-python main.py
-```
+1. Open the **Terminal** app (you can find it in Applications → Utilities → Terminal)
+2. Type this and press Enter:
+   ```
+   python3 --version
+   ```
+3. If you see a number like "Python 3.11.0" you have Python! Skip to Step 3.
+4. If you see an error, go to Step 2.
 
-#### Required Permissions
+**Step 2: Install Python (only if you don't have it)**
 
-- Windows may prompt you to allow Python through the firewall
-- No special permissions are typically required for screen capture on Windows
+1. Open your web browser
+2. Go to: **python.org/downloads**
+3. Click the big yellow "Download Python" button
+4. Open the file you downloaded
+5. Follow the instructions to install it
+6. When it's done, close Terminal and open it again
 
-#### Creating a Windows Shortcut (Optional)
+**Step 3: Download TaskShot**
 
-1. Right-click on your Desktop → **New** → **Shortcut**
-2. Enter the location: `pythonw.exe "C:\path\to\TaskShot-Compiler\main.py"`
-3. Name it "TaskShot"
+1. Open Terminal
+2. Copy this line and paste it into Terminal, then press Enter:
+   ```
+   git clone https://github.com/Tech-Inclusion-Pro/TaskShot-Compiler.git
+   ```
+3. Wait for it to finish downloading
+
+**Step 4: Install the extra pieces TaskShot needs**
+
+1. In Terminal, copy and paste this line, then press Enter:
+   ```
+   cd TaskShot-Compiler && pip3 install -r requirements.txt
+   ```
+2. Wait for it to finish (this might take a minute)
+
+**Step 5: Give TaskShot permission to work**
+
+TaskShot needs permission to take screenshots and see your mouse clicks.
+
+1. Click the Apple menu (top left of your screen)
+2. Click **System Settings**
+3. Click **Privacy & Security** on the left side
+4. Click **Screen Recording**
+5. Click the **+** button
+6. Find and add **Terminal**
+7. Go back and click **Accessibility**
+8. Click the **+** button
+9. Find and add **Terminal**
+10. Go back and click **Input Monitoring**
+11. Click the **+** button
+12. Find and add **Terminal**
+
+**Step 6: Run TaskShot**
+
+1. In Terminal, type this and press Enter:
+   ```
+   cd ~/TaskShot-Compiler && python3 main.py
+   ```
+2. TaskShot will open!
 
 ---
 
-### Linux
+### For Windows Computers
 
-#### Installation
+**Step 1: Install Python**
 
-1. Install Python and required system packages:
+1. Open your web browser
+2. Go to: **python.org/downloads**
+3. Click the big yellow "Download Python" button
+4. Open the file you downloaded
+5. **IMPORTANT:** Check the box that says "Add Python to PATH"
+6. Click "Install Now"
+7. Wait for it to finish
 
-**Ubuntu/Debian:**
-```bash
+**Step 2: Download TaskShot**
+
+1. Open your web browser
+2. Go to: **github.com/Tech-Inclusion-Pro/TaskShot-Compiler**
+3. Click the green "Code" button
+4. Click "Download ZIP"
+5. Find the ZIP file in your Downloads folder
+6. Right-click it and choose "Extract All"
+7. Click "Extract"
+
+**Step 3: Install the extra pieces TaskShot needs**
+
+1. Press the Windows key on your keyboard
+2. Type "cmd" and press Enter (this opens Command Prompt)
+3. Type this and press Enter:
+   ```
+   cd Downloads\TaskShot-Compiler-main
+   ```
+4. Type this and press Enter:
+   ```
+   pip install -r requirements.txt
+   ```
+5. Wait for it to finish
+
+**Step 4: Run TaskShot**
+
+1. In Command Prompt, type this and press Enter:
+   ```
+   python main.py
+   ```
+2. TaskShot will open!
+
+---
+
+### For Linux Computers
+
+**Step 1: Install what you need**
+
+Open Terminal and type these lines one at a time, pressing Enter after each:
+
+For Ubuntu or Debian:
+```
 sudo apt update
-sudo apt install python3 python3-pip python3-tk scrot
+sudo apt install python3 python3-pip python3-tk scrot git
 ```
 
-**Fedora:**
-```bash
-sudo dnf install python3 python3-pip python3-tkinter scrot
+For Fedora:
+```
+sudo dnf install python3 python3-pip python3-tkinter scrot git
 ```
 
-**Arch Linux:**
-```bash
-sudo pacman -S python python-pip tk scrot
-```
+**Step 2: Download TaskShot**
 
-2. Clone and install:
-```bash
+In Terminal, type this and press Enter:
+```
 git clone https://github.com/Tech-Inclusion-Pro/TaskShot-Compiler.git
-cd TaskShot-Compiler
-pip3 install -r requirements.txt
+```
+
+**Step 3: Install the extra pieces**
+
+Type this and press Enter:
+```
+cd TaskShot-Compiler && pip3 install -r requirements.txt
+```
+
+**Step 4: Run TaskShot**
+
+Type this and press Enter:
+```
 python3 main.py
 ```
 
-#### Required Permissions
+---
 
-- On Wayland, you may need to use XWayland or grant additional permissions
-- Some distributions may require adding your user to the `input` group:
-```bash
-sudo usermod -a -G input $USER
-```
-Then log out and back in.
+## Important: About the Terminal Window
+
+> **When TaskShot runs, a Terminal window will open. This is NORMAL!**
+>
+> The Terminal window needs to stay open while you use TaskShot. Don't close it!
+>
+> When you close TaskShot, the Terminal window will close by itself.
+>
+> This is how TaskShot gets permission to see your mouse clicks.
 
 ---
 
 ## How to Use TaskShot
 
-### Quick Start Guide
+### Starting a New Project
 
-1. **Launch TaskShot**
-   ```bash
-   cd TaskShot-Compiler
-   python3 main.py
-   ```
+1. Open TaskShot
+2. Type a name for your project (like "How to Save a File")
+3. Click the purple **Start Capture** button
 
-2. **Enter a Task Name**
-   - Type a descriptive name for your tutorial (e.g., "How to Create a New Document")
-   - This will be used as the document filename
+### Taking Screenshots
 
-3. **Start Capturing**
-   - Click **"Start Capture"** or press `Ctrl+Shift+S` (Mac: `Cmd+Shift+S`)
-   - The app will minimize to a control bar at the top of your screen
+1. After you click Start, do your task like normal
+2. Every time you click your mouse, TaskShot takes a picture
+3. You'll see a red circle where you clicked
+4. The number at the top shows how many pictures you've taken
 
-4. **Click Through Your Process**
-   - Every mouse click captures a screenshot
-   - A red circle indicates where you clicked
-   - The counter shows how many screenshots you've captured
+### Finishing Up
 
-5. **Stop Capturing**
-   - Click **"Stop Capture"** or press `Ctrl+Shift+X` (Mac: `Cmd+Shift+X`)
-
-6. **Review Your Screenshots**
-   - Add a **title** for each step (required)
-   - Add optional **notes** for additional context
-   - Add **alt text** for accessibility (describes the image for screen readers)
-
-7. **Generate Document**
-   - Click **"Generate Document"**
-   - Your accessible Word document will be created and saved to your Desktop
+1. Click the **Stop Capture** button when you're done
+2. You'll see all your pictures
+3. For each picture:
+   - Add a **title** (like "Step 1: Click the File menu")
+   - Add **notes** if you want to explain more
+   - Add **alt text** (this describes the picture for people who can't see it)
+4. Click **Generate Document**
+5. Your Word document will be saved to your Desktop!
 
 ---
 
 ## Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl+Shift+S` (Mac: `Cmd+Shift+S`) | Start capture |
-| `Ctrl+Shift+X` (Mac: `Cmd+Shift+X`) | Stop capture |
-| `Ctrl+Shift+H` (Mac: `Cmd+Shift+H`) | Show help |
-| `Ctrl+Shift+E` (Mac: `Cmd+Shift+E`) | Open settings |
-| `←` `→` Arrow keys | Navigate screenshots in review |
-| `Delete` | Remove selected screenshot |
+You can use your keyboard instead of clicking:
+
+| Press These Keys | What Happens |
+|------------------|--------------|
+| Ctrl+Shift+S | Start taking screenshots |
+| Ctrl+Shift+X | Stop taking screenshots |
+| Ctrl+Shift+H | Open help |
+| Arrow keys ← → | Look at different screenshots |
+| Delete | Remove a screenshot |
+
+On Mac, use **Cmd** instead of **Ctrl**.
 
 ---
 
-## Settings
+## If Something Goes Wrong
 
-Access settings by clicking the **Settings** button in the control bar.
+### "It won't take screenshots"
 
-### Capture Settings
-- **Sound feedback**: Play a sound when capturing
-- **Visual flash**: Flash the screen when capturing
-- **Circle color**: Color of the click indicator
-- **Circle size**: Size of the click indicator (20-80 pixels)
+**On Mac:**
+- Make sure you gave Terminal permission (see Step 5 in Mac instructions)
+- Try closing TaskShot and opening it again
 
-### Document Settings
-- **Header color**: Color of section headers in the document
-- **Table border color**: Color of borders around images
-- **Include footer**: Add accessibility statement to document
-- **Margin size**: Document margins (0.5", 0.75", or 1")
+**On Windows:**
+- Try right-clicking Command Prompt and choosing "Run as administrator"
 
----
+**On Linux:**
+- Make sure you installed `scrot`
 
-## Troubleshooting
+### "It only takes 2 screenshots then stops"
 
-### "Screen capture not working"
-- **macOS**: Grant Screen Recording permission in System Settings → Privacy & Security
-- **Linux**: Install `scrot` or `gnome-screenshot`
-- **Windows**: Run as Administrator if issues persist
+This happens on Mac when Terminal doesn't have permission.
 
-### "Mouse clicks not detected"
-- **macOS**: Grant Accessibility and Input Monitoring permissions to Terminal
-- **Linux**: Add user to `input` group and re-login
-- **All platforms**: Make sure `pynput` is installed: `pip install pynput`
+1. Go to System Settings → Privacy & Security → Input Monitoring
+2. Make sure Terminal is in the list and turned on
+3. Close TaskShot and open it again
 
-### "App only captures 2 screenshots then stops" (macOS)
-- This is a permissions issue. Make sure Terminal has **Input Monitoring** permission
-- Run TaskShot from Terminal directly: `cd ~/TaskShot && python3 main.py`
+### "It says module not found"
 
-### "Module not found" errors
-```bash
-pip install -r requirements.txt
+Run this command again:
+```
+pip3 install -r requirements.txt
 ```
 
 ---
 
-## Dependencies
+## Settings You Can Change
 
-TaskShot uses the following Python packages:
+Click the **Settings** button to change:
 
-- `Pillow` - Image processing
-- `pynput` - Global mouse/keyboard listening
-- `python-docx` - Word document generation
-- `mss` - Fast cross-platform screenshots
-
-Install all dependencies:
-```bash
-pip install -r requirements.txt
-```
+- **Sound**: Turn the click sound on or off
+- **Circle color**: Change the color of the circle that shows where you clicked
+- **Circle size**: Make the circle bigger or smaller
 
 ---
 
-## Output
+## Need Help?
 
-Documents are saved to your Desktop with the naming format:
-```
-[TaskName].TaskShot.[YYYY-MM-DD].docx
-```
-
-The generated documents include:
-- Proper heading structure (H1, H2)
-- Table header markup for accessibility
-- Alt text for all images
-- Language metadata
-- Page numbers
-- Accessibility footer statement
+If you have questions or find a problem:
+- Go to: **github.com/Tech-Inclusion-Pro/TaskShot-Compiler/issues**
+- Click "New Issue"
+- Tell us what happened
 
 ---
 
-## Contributing
+## Thank You!
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+TaskShot is free for everyone to use. It was made to help people create guides that everyone can use, including people with disabilities.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Made with care by **Rocco Catrone of Tech Inclusion Pro**
 
 ---
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- Built with accessibility in mind following WCAG 2.1 AA guidelines
-- Designed using Universal Design for Learning (UDL) principles
-- Created to make documentation accessible to everyone
-
----
-
-<p align="center">
-  Made with care by <strong>Rocco Catrone of Tech Inclusion Pro</strong>
-</p>
