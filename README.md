@@ -16,6 +16,24 @@
 
 ---
 
+## Quick Links
+
+| Jump To | What You'll Find |
+|---------|------------------|
+| [What Does TaskShot Do?](#what-does-taskshot-do) | Learn what this app does |
+| [How to Get TaskShot](#how-to-get-taskshot-on-your-computer) | What you need before you start |
+| [Mac Instructions](#for-mac-computers) | Download steps for Mac |
+| [Windows Instructions](#for-windows-computers) | Download steps for Windows |
+| [Linux Instructions](#for-linux-computers) | Download steps for Linux |
+| [About the Terminal Window](#important-about-the-terminal-window) | Why a Terminal window opens |
+| [How to Use TaskShot](#how-to-use-taskshot) | Step-by-step guide |
+| [Keyboard Shortcuts](#keyboard-shortcuts) | Quick keys you can use |
+| [If Something Goes Wrong](#if-something-goes-wrong) | Fix common problems |
+| [Settings](#settings-you-can-change) | Change how TaskShot works |
+| [Need Help?](#need-help) | Get support |
+
+---
+
 ## What Does TaskShot Do?
 
 TaskShot helps you make step-by-step guides with pictures. Here's how it works:
