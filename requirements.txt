@@ -1,0 +1,23 @@
+# TaskShot Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core GUI framework (included with Python)
+# tkinter
+
+# Image processing
+Pillow>=10.0.0
+
+# Word document generation
+python-docx>=1.1.0
+
+# Cross-platform screenshots
+mss>=9.0.0
+
+# Global mouse/keyboard listener
+pynput>=1.7.6
+
+# HTTP requests for Ollama API
+requests>=2.31.0
+
+# Audio playback (optional, for click sounds)
+pygame>=2.5.0
